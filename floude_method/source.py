@@ -146,18 +146,23 @@ class FloudeMethod:
 
 if __name__ == '__main__':
     # print(, end='\n\n')
-    g = FloudeMethod([
+    matrix1 = [
         [0, 4, 0, 2],
         [0, 0, 6, 0],
         [0, 0, 0, 0],
         [0, 1, 10, 0]
-    ])
+    ]
+    g = FloudeMethod(matrix1)
+
+    print('\n')
+    print("\n".join("\t".join(map(str, x)) for x in matrix1))
+    print()
     print(g.solve(0, 1), end='\n\n')
     print(g.solve(1, 2), end='\n\n')
     print(g.solve(0, 3), end='\n\n')
     print(g.solve(0, 2), end='\n\n')
 
-    g2 = FloudeMethod([
+    matrix2 = [
         [0, 10, 20, 0, 20, 0, 0, 0],
         [10, 0,  0, 20, 0, 0, 0, 0],
         [10, 0,  0, 0, 0, 20, 0, 0],
@@ -166,14 +171,22 @@ if __name__ == '__main__':
         [0, 0, 10, 0, 20, 0, 0, 20],
         [0, 0, 0, 10, 0, 0, 0, 20],
         [0, 0, 0, 0, 0, 20, 3, 0]
-    ])
+    ]
+    g2 = FloudeMethod(matrix2)
+    print('\n')
+    print("\n".join("\t".join(map(str, x)) for x in matrix2))
+    print()
     print(g2.solve(0, 5), end='\n\n')
 
-    g3 = FloudeMethod([
+    matrix3 = [
         [0, 0, 0, 1, 1],
         [0, 0, 0, 0, 0],
         [0, 1, 0, 0, 0],
         [0, 0, 1, 0, 0],
         [0, 2, 0, 0, 0]
-    ])
+    ]
+    g3 = FloudeMethod(matrix3)
+    print('\n')
+    print("\n".join("\t".join(map(str, x)) for x in matrix3))
+    print()
     print(g3.solve(0, 1), end='\n\n')
